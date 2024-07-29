@@ -1,0 +1,25 @@
+<!-- templates/thank_you.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+</head>
+<body>
+    <h1>Thank You!</h1>
+    <p>Your order has been confirmed.</p>
+
+    <!-- Add a button to logout -->
+    <form method="post" action="{{ url_for('logout') }}">
+        <button type="submit">Logout</button>
+    </form>
+
+    <!-- Add a button to book from a different restaurant -->
+    <form method="get" action="{{ url_for('select_restaurant') }}">
+        <button type="submit">Book from Different Restaurant</button>
+    </form>
+</body>
+</html>

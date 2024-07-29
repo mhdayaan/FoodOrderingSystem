@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap and Bootstrap Select CSS links here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
+    <title>Select a Restaurant</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose a Restaurant</h1>
+        <form method="post" action="{{ url_for('select_restaurant') }}">
+            <label for="restaurant">Select a restaurant:</label>
+            <select name="restaurant" id="restaurant" class="selectpicker" data-live-search="true" title="Select a restaurant...">
+                {% for restaurant in restaurants %}
+                    <option value="{{ restaurant[0] }}">{{ restaurant[1] }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- Add the button to redirect to the ratings page -->
+        <a href="{{ url_for('ratings') }}" class="btn btn-primary mt-3">View Ratings</a>
+    </div>
+
+    <!-- Add Bootstrap and Bootstrap Select JS links here -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+</body>
+</html>

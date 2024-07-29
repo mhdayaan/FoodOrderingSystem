@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>Signup</h2>
+<form method="POST" action="{{ url_for('signup') }}">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} {{ form.username() }}
+    {{ form.email.label }} {{ form.email() }}
+    {{ form.password.label }} {{ form.password() }}
+    {{ form.phone.label }} {{ form.phone() }}
+    {{ form.submit() }}
+</form>
+{% endblock %}
