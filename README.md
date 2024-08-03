@@ -25,8 +25,8 @@ This repository contains a simple food ordering system implemented using Flask, 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mhdayaan/DBMS
-   cd DBMS
+   git clone https://github.com/mhdayaan/food-ordering-system
+   cd food-ordering-system
    ```
 
 2. Install the required dependencies:
