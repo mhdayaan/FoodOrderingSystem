@@ -1,0 +1,4 @@
+Flask==2.3.4
+Flask-WTF==1.1.1
+WTForms==3.0.1
+Psycopg2==2.9.5
